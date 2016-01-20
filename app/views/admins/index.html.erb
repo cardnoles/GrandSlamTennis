@@ -1,1 +1,46 @@
 <p>this is the admins page from index.html.erb</p>
+
+<p><%=link_to "Back", '/tournaments' %></p><br><br>
+<br>
+
+
+<%= link_to "ADD A NEW PLAYER", players_new_path %><br>
+
+<h2>PLAYERS</h2>
+
+<% men = [] %>
+<% women = [] %>
+
+<% @players_sorted.each do |player| %>
+
+<% if player[:gender] === "male" %>
+   <% men.push (player) %>
+   <% else women.push (player) %>
+<% end %>
+
+
+<% end %>
+
+
+    MEN
+  <% men.each do |man| %>
+    <div>
+    <%= man[:first_name] %> <%= link_to man[:last_name], player_path(man) %>,
+    <%= man[:country] %>
+    <%= link_to "edit", edit_path(man) %>
+    <%= link_to "Delete this Player!", man, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
+
+    </div>
+  <% end %><br>
+     WOMEN
+    <% women.each do |woman| %>
+    <div>
+    <%= woman[:first_name] %> <%= link_to woman[:last_name], player_path(woman) %>,
+    <%= woman[:country] %>
+    <%= link_to "edit", edit_path(woman) %>
+    <%= link_to "Delete this Player!", woman, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
+
+    </div>
+  <% end %>
+
+

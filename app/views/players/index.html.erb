@@ -1,12 +1,5 @@
-<p><%=link_to "Back", '/tournaments' %><br><br>
+<p><%=link_to "Back", '/tournaments' %></p><br><br>
 <br>
-
-<% if current_user[:admin]%>
-<%= link_to "ADD A NEW PLAYER", players_new_path %>
-<% end %>
-
-
-
 
 <h2>PLAYERS</h2>
 
@@ -37,7 +30,34 @@
     <%= woman[:first_name] %> <%= link_to woman[:last_name], player_path(woman) %>,
     <%= woman[:country] %>
     </div>
+  <% end %><br>
+
+  <br>
+
+
+    PLAYERS by COUNTRY
+  <% @countries_sorted.each do |country| %>
+             <% country_players = [] %>
+             <% participating_country = false %>
+    <% @players_sorted.each do |player| %>
+        <% if player[:country] === country[:country_code] %>
+            <% participating_country = true %>
+            <% country_players.push (player) %>
+        <% end %>
+    <% end %>
+          <% if participating_country %>
+            <br><h4><%= country[:country] %>,  <%= country[:country_code] %></h4>
+               <% country_players.each do |country_player| %>
+               <%= country_player[:first_name] %> <%= country_player[:last_name] %><br>
+               <% end %>
+          <% end %>
   <% end %>
+
+
+
+
+
+
 
 
 
