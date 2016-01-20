@@ -1,0 +1,39 @@
+<h1>Add a new player to the tournament</h1>
+
+<%= form_for @player do |f| %>
+  <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
+
+   <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </p>
+
+  <p>
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </p>
+
+    <p>
+    <%= f.label :seed %><br>
+    <%= f.text_field :seed %>
+  </p>
+
+    <p>
+    <%= f.label :draw_line_number %><br>
+    <%= f.text_field :draw_line_number %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+

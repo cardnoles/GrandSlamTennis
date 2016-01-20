@@ -1,0 +1,63 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" for the icon fonts to work.
+@import "bootstrap-variables.scss";
+@import "bootstrap-custom-variables.scss";
+@import "bootstrap-sprockets.scss";
+@import "bootstrap.scss";
+
+body {
+  padding-top: $navbar-height + 10px;
+}
+
+.page-header {
+  a.btn {
+    float: right;
+  }
+
+  a.btn + a.btn {
+    margin-right: 8px;
+  }
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: initial;
+  height: initial;
+  margin-top: 7px;
+}
+
+main {
+  margin: 20px auto;
+  width: 800px;
+}
+
+.tournament-photo {
+  float: left;
+  width: 45%;
+  height: 45%;
+
+  //border: 2px solid white;
+}
+
+.tourneyname {
+  width: 35%;
+  clear: left;
+  //border: 2px solid black;
+}
+
+.photos {
+  clear: left;
+
+  width: 30%;
+
+  //border: 2px solid red;
+}
+
+.background-image {
+  width: 450px;
+  height: 450px;
+  background-size: cover;
+  background-image: url(https://i.guim.co.uk/img/media/d3a414b52f70acee01e0732e9161548f5b3fe9fe/0_0_5036_3357/master/5036.jpg?w=700&q=85&auto=format&sharp=10&s=9a6d743a40534d131af0f7e9d1a6c059);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+

@@ -1,0 +1,22 @@
+<% @tournaments.each do |tournament| %>
+  <div class='photos'>
+
+
+
+
+    <a href="/players"> <img class='tournament-photo' src="<%= tournament[:photo] %>" ></a>
+  </div>
+
+  <div class='tourneyname'>
+    <h2><%= link_to tournament[:name], '/players' %></h2> <br>
+    </div>
+    <br>
+<% end %>
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<p><%=link_to "Back", '/tournaments' %><br><br>
+<br>
+
+<% if current_user[:admin]%>
+<%= link_to "ADD A NEW PLAYER", players_new_path %>
+<% end %>
+
+
+
+
+<h2>PLAYERS</h2>
+
+<% men = [] %>
+<% women = [] %>
+
+<% @players_sorted.each do |player| %>
+
+<% if player[:gender] === "male" %>
+   <% men.push (player) %>
+   <% else women.push (player) %>
+<% end %>
+
+
+<% end %>
+
+
+    MEN
+  <% men.each do |man| %>
+    <div>
+    <%= man[:first_name] %> <%= link_to man[:last_name], player_path(man) %>,
+    <%= man[:country] %>
+    </div>
+  <% end %><br>
+     WOMEN
+    <% women.each do |woman| %>
+    <div>
+    <%= woman[:first_name] %> <%= link_to woman[:last_name], player_path(woman) %>,
+    <%= woman[:country] %>
+    </div>
+  <% end %>
+
+
+
+
+
+
+
+
+
+
+

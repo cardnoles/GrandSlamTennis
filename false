@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20160119163005_update_users_column.rb

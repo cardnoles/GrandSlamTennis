@@ -1,0 +1,40 @@
+<h3>Edit a user's information</h3>
+
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
+
+   <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
+    <%= f.label :user_name %><br>
+    <%= f.text_field :user_name %>
+  </p>
+
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </p>
+
+    <p>
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </p>
+
+      <p>
+    <%= f.label :admin %><br>
+    <%= f.text_field :admin %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
+

@@ -1,0 +1,14 @@
+<h1>This is the show users page from the show.html.erb file.</h1>
+
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+<p><%= @user.user_name %></p>
+<p><%= @user.password %></p>
+<p><%= @user.email %></p>
+<p><%= @user.admin %></p>
+
+
+<%=link_to "Edit User's Info", edit_user_path%>
+<%= link_to "Delete this User!", @user, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %><br>
+
+
+

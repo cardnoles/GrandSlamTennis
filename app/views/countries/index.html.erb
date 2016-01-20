@@ -1,0 +1,17 @@
+<h1>This is the countries page from the index.html.erb file.</h1>
+<h2>can you hear me?</h2>
+<% counter = 0 %>
+<% @countries.each do |country| %>
+  <div>
+
+    This is my country: <%= country[:country] %><br>
+    Country Code: <%= country[:country_code] %><br>
+    This guy rules: <%= country[:president] %><br>
+    <% counter = counter + 1%>
+    </div>
+
+    <br>
+<% end %>
+<%= counter %>
+
+
