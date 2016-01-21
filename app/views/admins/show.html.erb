@@ -23,8 +23,9 @@
     <div>
     <%= man[:first_name] %> <%= link_to man[:last_name], player_path(man) %>,
     <%= man[:country] %>
-    <%= link_to "edit", edit_path(man) %>
-    <%= link_to "Delete this Player!", man, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
+    <%= link_to "Edit this player", edit_path(man) %>
+    <%= link_to "Delete this player", man, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
+
 
     </div>
   <% end %><br>
@@ -35,6 +36,7 @@
     <%= woman[:country] %>
     <%= link_to "edit", edit_path(woman) %>
     <%= link_to "Delete this Player!", woman, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
+
 
     </div>
   <% end %>
