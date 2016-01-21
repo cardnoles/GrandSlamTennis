@@ -1,17 +1,15 @@
+
+
 <% @tournaments.each do |tournament| %>
+
   <div class='photos'>
-
-<% if current_user[:admin]%>
-<%= link_to "ADMIN FUNCTIONS", admins_path %>
-<% end %>
-
 
     <a href="/players"> <img class='tournament-photo' src="<%= tournament[:photo] %>" ></a>
   </div>
 
-  <div class='tourneyname'>
+
     <h2><%= link_to tournament[:name], '/players' %></h2> <br>
-    </div>
+
     <br>
 <% end %>
 
