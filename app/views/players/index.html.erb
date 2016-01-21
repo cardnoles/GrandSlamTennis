@@ -1,17 +1,22 @@
+<body id="players-page">
+
 <title>Players</title>
 
 
 <p><%=link_to "Back", '/tournaments' %></p>
 
-
-<h2>MEN'S DRAW</h2>
-<a href="http://www.ausopen.com/en_AU/scores/draws/ms/msdraw.pdf">Men's Singles Draw</a>
-
-<h2>WOMEN'S DRAW</h2>
-<a href="http://www.ausopen.com/en_AU/scores/draws/ws/wsdraw.pdf">Women's Singles Draw</a>
+<div id="draws">
+  <div id="mens-draw">
+    <h2>MEN'S DRAW</h2>
+    <p style="text-align: center"><a href="http://www.ausopen.com/en_AU/scores/draws/ms/msdraw.pdf">Men's Singles Draw</a></p>
+  </div>
+  <div id="womens-draw">
+    <h2>WOMEN'S DRAW</h2>
+    <p style="text-align: center"><a href="http://www.ausopen.com/en_AU/scores/draws/ws/wsdraw.pdf">Women's Singles Draw</a></p>
+  </div>
+</div>
 
 <h2>PLAYERS</h2>
-
 <% men = [] %>
 <% women = [] %>
 
@@ -25,26 +30,28 @@
 
 <% end %>
 
-
-    MEN
-  <% men.each do |man| %>
-    <div>
+<div id="all-players">
+    <div id="men-players">
+    <h4>MEN</h4>
+    <% men.each do |man| %>
     <%= man[:first_name] %> <%= link_to man[:last_name], player_path(man) %>,
-    <%= man[:country] %>
+    <%= man[:country] %><br>
+    <% end %>
     </div>
-  <% end %><br>
-     WOMEN
+
+    <div id="women-players">
+     <h4>WOMEN</h4>
     <% women.each do |woman| %>
-    <div>
     <%= woman[:first_name] %> <%= link_to woman[:last_name], player_path(woman) %>,
-    <%= woman[:country] %>
+    <%= woman[:country] %><br>
+    <% end %>
     </div>
-  <% end %><br>
+</div>
 
   <br>
 
-
-    PLAYERS by COUNTRY
+<div id="players-by-country">
+    <h2>PLAYERS by COUNTRY</h2>
   <% @countries_sorted.each do |country| %>
              <% country_players = [] %>
              <% participating_country = false %>
@@ -54,13 +61,16 @@
             <% country_players.push (player) %>
         <% end %>
     <% end %>
-          <% if participating_country %>
+        <% if participating_country %>
             <br><h4><%= country[:country] %>,  <%= country[:country_code] %></h4>
-               <% country_players.each do |country_player| %>
-               <%= country_player[:first_name] %> <%= country_player[:last_name] %><br>
-               <% end %>
-          <% end %>
+            <% country_players.each do |country_player| %>
+                 <%= country_player[:first_name] %> <%= country_player[:last_name] %><br>
+            <% end %>
+        <% end %>
   <% end %>
+</div>
+
+</body>
 
 
 

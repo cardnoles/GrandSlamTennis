@@ -1,4 +1,6 @@
-<p><%=link_to "Back", '/tournaments' %></p>
+<body id="admins-page">
+
+<p><%=link_to "Back", '/admins' %></p>
 <h2>Countries with Tennis Federations</h2>
 <% counter = 0 %>
 <% @countries.each do |country| %>
@@ -6,7 +8,7 @@
 
     ID: <%= country[:id] %><br>
     <% if current_user[:admin]%>
-      Country: <%= link_to country[:country], edit_country_path(country) %><br>
+      Country: <%= link_to country[:country], country_path(country) %><br>
     <% else %>
       Country: <%= country[:country] %><br>
     <% end %>
@@ -18,5 +20,7 @@
     <br>
 <% end %>
      There are <%= counter %> tennis federations
+
+</body>
 
 

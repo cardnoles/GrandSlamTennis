@@ -1,3 +1,4 @@
+<body id="tournaments-page">
 <% if current_user[:admin]%>
 <%= link_to "ADMIN FUNCTIONS", admins_path %>
 <% end %>
@@ -5,14 +6,27 @@
 
 <% @tournaments.each do |tournament| %>
 
-  <div class='photos'>
-    <a href="/players"> <img class='tournament-photo' src="<%= tournament[:photo] %>" ></a>
-  </div>
-  <br>
 
-  <h2><%= link_to tournament[:name], '/players' %></h2> <br>
+  <% if tournament[:name] === "Australian Open" %>
+
+    <div class='photos'>
+      <a href="/players"> <img class='tournament-photo' src="<%= tournament[:photo] %>" ></a>
+    </div>
+    <h2 id="GS-name-tourney-page"><%= link_to tournament[:name], '/players' %></h2> <br>
+
+  <% else %>
+    <div class='photos'>
+      <img class='tournament-photo' src="<%= tournament[:photo] %>" >
+    </div>
+    <h2 id="GS-name-tourney-page"><%= tournament[:name] %></h2> <br>
+  <% end %>
+
+  <br>
   <br>
 <% end %>
+</body>
+
+
 
 
 

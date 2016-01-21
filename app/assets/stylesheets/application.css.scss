@@ -30,26 +30,23 @@ main {
 }
 
 .tournament-photo {
-  float: left;
-  width: 45%;
-  height: 45%;
-
+  width: 100%;
+  margin: 0px auto;
   //border: 2px solid white;
 }
 
 .tourneyname {
-
-  width: 35%;
-  clear: left;
-  //border: 2px solid black;
+  margin-left: 50%;
+  width: 100%;
+  //clear: left;
+  border: 2px solid black;
 }
 
 .photos {
-  clear: left;
-
+  //clear: left;
   width: 30%;
-
   //border: 2px solid red;
+  margin: 0px auto;
 }
 
 .background-image {
@@ -78,6 +75,73 @@ main {
 #sign {
   width: 100%;
   text-align: center;
+}
+
+#tournaments-page {
+  background-color: #ff6600;
+}
+
+#GS-name-tourney-page {
+  width: 100%;
+  //border: 2px solid green;
+  text-align: center;
+}
+
+#players-page {
+  background-color: #ffff66;
+}
+
+#admins-page {
+  background-color: #99ff66;
+}
+
+#admins-two {
+  float: left;
+  clear: left;
+}
+
+#admins-three {
+  float: right;
+  clear: right;
+}
+
+#mens-draw {
+  margin-left: 18%;
+  //border: 2px solid purple;
+  float: left;
+  clear: left;
+  margin-bottom: 25px;
+}
+
+#womens-draw {
+  margin-right: 18%;
+  //border: 2px solid red;
+  float: right;
+  clear: right;
+    margin-bottom: 25px;
+}
+
+#men-players {
+  margin-left: 3%;
+  width: 45%;
+  //border: 2px solid white;
+  float: left;
+  clear: left;
+  margin-bottom: 50px;
+}
+
+#women-players {
+  margin-right: 3%;
+  width: 45%;
+  //border: 2px solid blue;
+  float: right;
+  clear: right;
+  margin-bottom: 50px;
+}
+
+#players-by-country {
+
+
 }
 
 

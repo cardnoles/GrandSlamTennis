@@ -1,10 +1,18 @@
+<body id="admins-page">
 <p><%=link_to "Back", '/tournaments' %></p>
 
+<div id="admins-one">
+  <div id="admins-two">
+    <h2><%= link_to "ADD A NEW PLAYER", players_new_path %></h2>
+    <h2><%= link_to "ADD A NEW USER", users_new_path %></h2>
+    <h2><%= link_to "ADD A NEW COUNTRY", countries_new_path %></h2><br>
+  </div>
+  <div id="admins-three">
+    <h3><%= link_to "EDIT PLAYERS", '/admins/players' %></h3>
+    <h3><%= link_to "EDIT USERS", users_path %></h3>
+    <h3><%= link_to "EDIT COUNTRIES", countries_path %></h3>
+  </div>
+</div>
+</body>
 
-<h2><%= link_to "ADD A NEW PLAYER", players_new_path %></h2>
-<h2><%= link_to "ADD A NEW USER", users_new_path %></h2>
-<h2><%= link_to "ADD A NEW COUNTRY", countries_new_path %></h2>
-<h3><%= link_to "EDIT USERS", users_path %></h3>
-<h3><%= link_to "EDIT COUNTRIES", countries_path %></h3>
-<h3><%= link_to "EDIT PLAYERS", '/admins/players' %></h3><br>
 
