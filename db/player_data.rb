@@ -57,16 +57,16 @@ def get_player_data
                     notes: ""
                   },
                   {
-                    first_name: "Rafael",
-                    last_name: "NADAL",
+                    first_name: "Jack",
+                    last_name: "SOCK",
                     birthdate: "",
                     age: "",
-                    country: "",
-                    ranking: "ESP",
+                    country: "USA",
+                    ranking: "",
                     gender: "male",
                     tournament: "",
                     seed: "5",
-                    draw_line_number: "65",
+                    draw_line_number: "14",
                     photo: "",
                     notes: ""
                   },

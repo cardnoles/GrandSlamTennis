@@ -71,7 +71,7 @@ user_data.each  do |user|
       user_name:         user[:user_name],
       email:             user[:email],
       admin:             user[:admin],
-      password:          user[:password],
-      password_digest:   user[:password_digest]
+      password_digest:   user[:password_digest],
+      remember_token:    user[:remember_token]
     })
 end

@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  has_secure_password
+   # has_secure_password
 
   before_save { email.downcase! }
 
@@ -11,9 +11,9 @@ class User < ActiveRecord::Base
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
 
-  validates :password, length: { minimum: 8, maximum: 20 }
+  #  validates :password, length: { minimum: 8, maximum: 20 }
 
-  validate :password_complexity
+  # validate :password_complexity
 
   def self.new_remember_token
     SecureRandom.urlsafe_base64
@@ -23,11 +23,11 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest(token.to_s)
   end
 
-  def password_complexity
-    if password.present? and not password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)./)
-      errors.add :password, "must include at least one lowercase letter, one uppercase letter, and one digit"
-    end
-  end
+  # def password_complexity
+  #   if password.present? and not password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)./)
+  #     errors.add :password, "must include at least one lowercase letter, one uppercase letter, and one digit"
+  #   end
+  # end
 
   def to_s
     email
