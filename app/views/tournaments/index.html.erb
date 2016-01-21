@@ -1,4 +1,6 @@
-
+<% if current_user[:admin]%>
+<%= link_to "ADMIN FUNCTIONS", admins_path %>
+<% end %>
 
 <% @tournaments.each do |tournament| %>
 
