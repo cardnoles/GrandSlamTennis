@@ -1,9 +1,22 @@
-
-
-<h1><%= @player.first_name %> <%= @player.last_name %></h1>
-<p><%= @player.country %></p>
-
 <p><%=link_to "Back", '/players' %>
+
+<div class='playerphotos'>
+  <a href="/players"> <img class='player-photo' src="<%= @player[:photo] %>" ></a>
+</div>
+
+<h1><b><%= @player.first_name %> <%= @player.last_name %></b></h1><br>
+<h3>Country:  <%= @player.country %></h3><br><br>
+
+<h3>Ranking:  <%= @player.ranking %></h3><br>
+<h3>Age:  <%= @player.age %></h3><br>
+<h3>Birthdate:  <%= @player.birthdate %></h3><br>
+<h2>Australian Open</h2><br>
+<h3>Seed Number:  <%= @player.seed %></h3><br>
+<h3>Draw Line Number:  <%= @player.draw_line_number%></h3><br>
+
+
+
+
 
 
 
