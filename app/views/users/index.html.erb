@@ -1,10 +1,10 @@
-
+<p><%=link_to "Back", '/admins' %></p>
 
 <% @users.each do |user| %>
   <div>
     id: <%= user[:id] %> <br>
     first name: <%= user[:first_name] %> <br>
-    last name: <%= user[:last_name] %><br>
+    last name: <%= link_to user[:last_name], user_path(user) %>   (click last name to edit or delete) <br>
     user name: <%= user[:user_name] %><br>
     email: <%= user[:email] %><br>
     password: <%= user[:password] %><br>

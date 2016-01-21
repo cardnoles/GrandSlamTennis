@@ -1,17 +1,22 @@
-<h1>This is the countries page from the index.html.erb file.</h1>
-<h2>can you hear me?</h2>
+<p><%=link_to "Back", '/tournaments' %></p>
+<h2>Countries with Tennis Federations</h2>
 <% counter = 0 %>
 <% @countries.each do |country| %>
   <div>
 
-    This is my country: <%= country[:country] %><br>
-    Country Code: <%= country[:country_code] %><br>
-    This guy rules: <%= country[:president] %><br>
+    ID: <%= country[:id] %><br>
+    <% if current_user[:admin]%>
+      Country: <%= link_to country[:country], edit_country_path(country) %><br>
+    <% else %>
+      Country: <%= country[:country] %><br>
+    <% end %>
+      Country Code: <%= country[:country_code] %><br>
+      President: <%= country[:president] %><br>
     <% counter = counter + 1%>
     </div>
 
     <br>
 <% end %>
-<%= counter %>
+     There are <%= counter %> tennis federations
 
 

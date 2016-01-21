@@ -1,0 +1,19 @@
+<p><%=link_to "Back", '/admins' %></p>
+
+<h1><%= @country.country %></h1>
+<p><%= @country.country_code %></p>
+<p><%= @country.fed_name %></p>
+<p><%= @country.fed_address %></p>
+<p><%= @country.fed_city %></p>
+<p><%= @country.telephone %></p>
+<p><%= @country.email %></p>
+<p><%= @country.president %></p>
+<p><%= @country.website %></p>
+<p><%= @country.flag %></p>
+
+
+
+
+
+<%=link_to "Edit Country's Info", edit_country_path%>
+<%= link_to "Delete this Country!", @country, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %><br>

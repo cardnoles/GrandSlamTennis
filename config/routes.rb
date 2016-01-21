@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   get '/countries', to: 'countries#index'
   get '/countries/new', to: 'countries#new'
   post '/countries', to: 'countries#create'
+  get '/countries/:id', to: 'countries#show', as: :country
+  get 'countries/:id/edit', to: 'countries#edit', as: :edit_country
+  patch 'countries/:id', to: 'countries#update'
+  delete 'countries/:id', to: 'countries#destroy'
 
   get '/players', to: 'players#index'
   get '/players/new', to: 'players#new'
@@ -30,6 +34,7 @@ Rails.application.routes.draw do
   delete 'users/:id', to: 'users#destroy'
 
   get '/admins', to: 'admins#index'
+  get '/admins/players', to: 'admins#show'
 
   get '/tournaments', to: 'tournaments#index'
 

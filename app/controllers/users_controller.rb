@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def create
      user = params[:user].permit(:first_name, :last_name, :user_name, :email, :admin, :password)
      User.create(user)
-     redirect_to users_path
+     redirect_to sessions_new_path
   end
 
 
