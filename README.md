@@ -27,7 +27,7 @@ GrandSlamTennis has two functions.  The first is for the general user who, after
 * Sign up/sign in
 * Click on one of the tournaments (currently the Australian Open is the only one active)
 * Click on draws or player name to obtain more detailed information
-* Click on ADMIN FUNCTIONS to be directed to initial admin function page.  From there, the admin user and Create, Update, Edit or Delete a player, country, or user.
+* Click on ADMIN FUNCTIONS to be directed to initial admin functions page.  From there, the admin user can Create, Update, Edit or Delete a player, country, or user.
 
 
 
