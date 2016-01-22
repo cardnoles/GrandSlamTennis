@@ -1,41 +1,50 @@
 # GrandSlamTennis
 
-# TicTacToe 
+###Project Two
 
-![a tic-tac-toe board](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStko2seISMuGrQCe-yyEGYXvwSbn6YnQRnT4sScdYQxrl7myme)
+GrandSlamTennis is General Assembly's WDI-ATL cohort 5's second project. GrandSlamTennis is a full-stack application that was developed using Ruby on Rails.  The technical requirements of the assignment included:
 
-###Project One
+* creating at least 2 models - one for a user and the other for the main functional idea of the app
+* implementing sign up/sign in components
+* using RESTful routes
+* generating a database table structure with an ORM 
 
-TicTacToe is General Assembly's WDI-ATL cohort 5's first project.  TicTacToe was developed using HTML, CSS, and JavaScript.  Manipulating the DOM, creating a solid front end, and successfully deploying the project were the main requirements.  Bonus features and other games were presented as options for this assignment.  This TicTacToe game does not fall into the bonus category.
 
 
-###TicTacToe Basics
+###GrandSlamTennis Basics
 
-The game of tic-tac-toe is played with two players.  Each player has a symbol, either an x or o.  The players take turns entering their symbol into an available square.  The goal is to get 3 symbols in a row either across a row, down a column or on the diagonal.  The first player to do so wins.  Sometimes there is not a winner - this result is referred to as a cat's tail game.
+GrandSlamTennis has two functions.  The first is for the general user who, after signing up/in, can get general information about players competing in Grand Slam events.  The second is for an admin user who can update player, country and user data.  The general user does not have access to the admin user pages. 
+
 
 ###User Process
 
-* Enter the names for player X and player O
-* Enter the name of the first player
-* Click "play game"
-* Click "play again" if playing another game is desired
+####General User
+* Sign up/sign in
+* Click on one of the tournaments (currently the Australian Open is the only one active)
+* Click on draws or player name to obtain more detailed information
+
+####Admin User
+* Sign up/sign in
+* Click on one of the tournaments (currently the Australian Open is the only one active)
+* Click on draws or player name to obtain more detailed information
+* Click on ADMIN FUNCTIONS to be directed to initial admin function page.  From there, the admin user and Create, Update, Edit or Delete a player, country, or user.
 
 
-###Languages Used
 
-* HTML
-* CSS
-* JavaScript
+###Language and Framework Used
+
+* Ruby on Rails
+
 
 
 ###Links
 
-deployed: http://cardnoles.github.io/TicTacToe/
+deployed: http://
 
-github site: https://github.com/cardnoles/TicTacToe
+github site: https://github.com/cardnoles/GrandSlamTennis
 
 ###ToDos
 
 * make all elements responsive
-* add a tally for multiple games
+* add a comments section on the individual player page for general users to leave nice remarks about the player
 * enhance user experience
