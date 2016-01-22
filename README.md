@@ -33,3 +33,9 @@ The game of tic-tac-toe is played with two players.  Each player has a symbol, e
 deployed: http://cardnoles.github.io/TicTacToe/
 
 github site: https://github.com/cardnoles/TicTacToe
+
+###ToDos
+
+* make all elements responsive
+* add a tally for multiple games
+* enhance user experience
